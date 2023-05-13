@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+<div class="hero-container full-width show-on-mobile pt1 pl2 pr2">
+    <div class="hero full-width full-height" style="background:rgba(0,0,0,0) url(/img/4.jpg) no-repeat scroll center center/cover"></div>
+</div>
+<div class="hide-on-mobile hero" style="background:rgba(0,0,0,0) url(/img/4.jpg) no-repeat scroll center center/cover"></div>
+<img src="{% static 'img/2.jpg' %}"  width="1182" height="812" style="margin-left: 50px; margin-top: 200px;">
+
+<div class="body full-width pt1 pr2 pb2 pl2">
+    {% include 'includes/navigator.html' %}
+
+    <main class="content pt2 pb2">
+        <h2>Contact</h2>
+        <p>We'd love to hear from you. Give us a ring at +44&nbsp;7911&nbsp;123456, or send us a message&nbsp;below.</p>
+        <form method="post", enctype="multipart/form-data" action="{% url 'main:contact' %}">
+        {% csrf_token %}
+        <form class="form">
+            {% comment %} {% for field in form %} {% endcomment %}
+            <input class="form-control mb1" placeholder="Name"> {{ form.name }}
+            {% comment %} {% endfor %} {% endcomment %}
+            <input class="form-control mb1"  placeholder="Email Address"> {{ form.email }}
+            <input class="form-control mb1" placeholder="Text"> {{ form.text }}
+            <button type="submit" class="btn btn-primary">Отправить</button> 
+    </main>
+{% endblock content %}

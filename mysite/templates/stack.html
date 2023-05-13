@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}      
+<div class="hero-container full-width show-on-mobile pt1 pl2 pr2">
+    <div class="hero full-width full-height" style="background:rgba(0,0,0,0) url(/img/2.jpg) no-repeat scroll center center/cover"></div>
+</div>
+<div class="hide-on-mobile hero" style="background:rgba(0,0,0,0) url(/img/2.jpg) no-repeat scroll center center/cover"></div>
+<img src="{% static 'img/3.jpg' %}"  width="1182" height="812" style="margin-left: 50px; margin-top: 40px;">
+
+
+<div class="body full-width pt1 pr2 pb2 pl2">
+    {% include 'includes/navigator.html' %}
+    <main class="content pt2 pb2">
+        <h2>Технологии</h2>
+        <div class="border--full rounded pt1 pb1 pr2 pl2 mb1">
+            <div class="grid-row">
+                <div class="grid-column span-half align--center-on-tiny">
+                    <p class="mb0 bold">Python</p>
+                </div>
+                <div class="grid-column span-half align--right align--center-on-tiny">
+                    <p class="mb0">3.7, 3.9</p>
+                </div>
+            </div>
+        </div>
+        <div class="border--full rounded pt1 pb1 pr2 pl2 mb1">
+            <div class="grid-row">
+                <div class="grid-column span-half align--center-on-tiny">
+                    <p class="mb0 bold">Django</p>
+                </div>
+                <div class="grid-column span-half align--right align--center-on-tiny">
+                    <p class="mb0">2,3,4</p>
+                </div>
+            </div>
+        </div>
+        <div class="border--full rounded pt1 pb1 pr2 pl2 mb1">
+            <div class="grid-row">
+                <div class="grid-column span-half align--center-on-tiny">
+                    <p class="mb0 bold">Django REST framework</p>
+                </div>
+                <div class="grid-column span-half align--right align--center-on-tiny">
+                    <p class="mb0"></p>
+                </div>
+            </div>
+        </div>
+        <div class="border--full rounded pt1 pb1 pr2 pl2">
+            <div class="grid-row">
+                <div class="grid-column span-half align--center-on-tiny">
+                    <p class="mb0 bold">Linux, bash</p>
+                </div>
+                <div class="grid-column span-half align--right align--center-on-tiny">
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock content %}

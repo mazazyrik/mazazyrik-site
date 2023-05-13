@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}      
+<div class="hero-container full-width show-on-mobile pt1 pl2 pr2">
+    <div class="hero full-width full-height" style="background:rgba(0,0,0,0) url(/img/2.jpg) no-repeat scroll center center/cover"></div>
+</div>
+<div class="hide-on-mobile hero" style="background:rgba(0,0,0,0) url(/img/2.jpg) no-repeat scroll center center/cover"></div>
+<img src="{% static 'img/1.jpg' %}"  width="1000" height="700" style="margin-left: 50px; margin-top: 40px;">
+
+
+<div class="body full-width pt1 pr2 pb2 pl2">
+{% include 'includes/navigator.html' %}
+<main class="content pt2 pb2">
+    <h2>История</h2>
+    <p>
+        Я Никита. Родился я в прекрасном городе Москва в замечательный вечер 13-го марта 2006 года.<br>
+        Увлекаться компьюетрами я стал с самого детства. Любил залезть в системные файлы и поудалять там что-нибудь.
+        В сознательном возрасте начал увлекаться языками программирования и изучением работы терминала. 
+        Около двух месяцев назад, узнал о том, что мой друг уже занимается и с такой мотивацией решил углубиьтся в этот вопрос и не пожалел. 
+        Обожаю это дело, хоть и бывают неудачи.<br>
+        Кроме этого, я спорстмен - професиональный бальный танцор. Имею много титулов и продолжаю этим заниматься. 
+        Также, увелкаюсь музыкой. Пишу музыку под псевдонимом mazazyrik. Играю на акустической и электрогитаре и умею базово играть на клавишах. 
+        Изучал все самостоятельно<br>
+        Спасибо за уделенное время :)<br>
+        Ссылки на меня:<br>
+        https://github.com/mazazyrik<br>
+        https://vk.com/tarelka2281337<br>
+        Telegram: @mazazyrikbeats
+      </p>    <p><a href="/contact" class="link link--default">Оставить заявку, либо небольшой отзыв о сайте</a></p>
+</main>
+{% endblock content %}

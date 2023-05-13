@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="hero-container full-width show-on-mobile pt1 pl2 pr2">
+    
+    <div class="hero full-width full-height"> </div>
+</div>
+<div class="hide-on-mobile hero" style="background:rgba(0,0,0,0) url(/img/1.jpg) no-repeat scroll center center/cover"></div>
+<img src="{% static 'img/5.jpg' %}"  width="1182" height="812" style="margin-left: 50px; margin-top: 40px;">
+
+<div class="body full-width pt1 pr2 pb2 pl2">
+    {% include 'includes/navigator.html' %}
+    <main class="content pt2 pb2">
+        <h2>Кто я такой?</h2>
+        <p>Всем посетителям данного сайта Hello world! Я Чуваев Никита - начинающий Python разработчик. Последние несколько лет
+            я активно изучаю Python и, также, в прошлом году я пошел на шикарный курс от Яндекс Практикума, где и освоил Python и Django.
+            Кстати, этот сайт полностью написан мной. (И даже фронт)
+        </p>
+            
+{% endblock content %}
