@@ -21,6 +21,7 @@ def contact(request):
     form = ContactForm(request.POST or None, files=request.FILES or None)
     if request.method == 'POST':
         if form.is_valid():
-            form.save(commit=False)
-            # return redirect('main:index')
+            form.save()
+            return redirect('main:index')
+        return render(request, template, {'form': form})
     return render(request, template, {'form': form})
