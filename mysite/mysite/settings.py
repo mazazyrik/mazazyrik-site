@@ -6,9 +6,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-g6r4%+-^*xm@@3m6j*ix-+6ym)5&!sa=(pop9)x_zx*un&h$gs'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'www.chuvaev06.pythonanywhere.com',
+    'chuvaev06.pythonanywhere.com'
+]
 
 
 INSTALLED_APPS = [
